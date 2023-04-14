@@ -59,4 +59,17 @@ public class TestEntityThisAndThat extends EntityThis {
        JKLValues result = thisObject.getJkl();
        assertEquals(result, jkl);
     }
+    
+    @Test 
+    public void testRemove() {
+      EntityThis thisObject = new EntityThis(0);
+      Boolean result = thisObject.remove();
+      assertEquals(result, false);
+      EntityThis thisObject = new EntityThis(5);
+      Boolean result = thisObject.remove();
+      assertEquals(result, true);
+    }
+
+
+
 }
