@@ -5,6 +5,16 @@ import java.util.Date;
 
 public class TestEntityThisAndThat extends EntityThis {
 
+    @Test
+    public void testPrimaryKeyColumnName() {
+        assertEquals(self.primaryKeyColumnName(), "This_pk");
+    }
+
+    @Test
+    public void testPrimaryKeyColumnIndex() {
+        assertEquals(self.primaryKeyColumnIndex(), 1);
+    }
+
    //test to make sure contstructor works
    @Test
     public void testConstructor() {
@@ -19,7 +29,7 @@ public class TestEntityThisAndThat extends EntityThis {
       EntityThis thisObject = new EntityThis();
       thisObject.setAbc("Hello World");
       String result = thisObject.getAbc();
-      assertEquals(result, "Hello World")
+      assertEquals(result, "Hello World");
     }
 
     //test to make sure setDef and getDef work
