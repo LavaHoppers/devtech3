@@ -5,6 +5,26 @@ import java.util.Date;
 
 public class TestEntityThisAndThat extends EntityThis {
 
+    // test the pk column name
+    @Test
+    public void testPrimaryKeyColumnName() {
+        assertEquals(self.primaryKeyColumnName(), "This_pk");
+    }
+
+    // test the pk column index
+    @Test
+    public void testPrimaryKeyColumnIndex() {
+        assertEquals(self.primaryKeyColumnIndex(), 1);
+    }
+
+    // test corret primary key
+    @Test
+    public int testPrimaryKey() {
+        EntityThis e = new EntityThis();
+        e.load(1);
+        assertEquals(e.primaryKey(), 1)
+    }
+
    //test to make sure contstructor works
    @Test
     public void testConstructor() {
