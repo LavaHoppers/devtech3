@@ -14,4 +14,10 @@ public class TestEntityThisAndThat extends EntityThis {
    public void testSaveWorksWhenAlways() {
 
    }
+   
+   @Test
+    public void testConstructor() {
+        this = new EntityThis();
+        assertNotEquals(null, this)
+    }
 }
